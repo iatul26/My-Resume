@@ -7,9 +7,9 @@
 
     <style>
       body {
-        font-family: "Segoe UI", Arial, sans-serif;
+        font-family: "Segoe UI", Roboto, Arial, sans-serif;
         margin: 0;
-        background: #ffffff;
+        background: #f5f7fa;
         color: #222;
         line-height: 1.6;
       }
@@ -17,29 +17,33 @@
       .container {
         max-width: 850px;
         margin: 40px auto;
-        padding: 30px;
+        padding: 40px 45px;
+        background: #ffffff;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        border-left: 6px solid #2c3e50;
       }
-
+      .name {
+        font-weight: 700;
+      }
       header {
-        border-bottom: 2px solid #2c3e50;
-        padding-bottom: 15px;
         margin-bottom: 25px;
       }
 
       h1 {
         margin: 0;
-        font-size: 32px;
+        font-size: 34px;
         color: #2c3e50;
+        letter-spacing: 0.5px;
       }
 
       .contact {
-        margin-top: 6px;
+        margin-top: 8px;
         font-size: 14px;
         color: #555;
       }
 
       .contact a {
-        color: #2980b9;
+        color: #1a73e8;
         text-decoration: none;
       }
 
@@ -48,19 +52,24 @@
       }
 
       section {
-        margin-top: 25px;
+        margin-top: 26px;
       }
 
       h2 {
         font-size: 18px;
         color: #2c3e50;
-        border-bottom: 2px solid #3498db;
+        margin-bottom: 8px;
         padding-bottom: 4px;
-        margin-bottom: 10px;
+        border-bottom: 2px solid #e1e5ea;
+        letter-spacing: 0.4px;
+      }
+
+      p {
+        margin: 6px 0;
       }
 
       ul {
-        padding-left: 20px;
+        padding-left: 18px;
         margin: 6px 0;
       }
 
@@ -71,17 +80,20 @@
       .project-title {
         font-weight: 600;
         font-size: 16px;
+        margin-top: 10px;
       }
 
       .meta {
-        font-size: 14px;
-        color: #555;
+        font-size: 13.5px;
+        color: #666;
+        margin-bottom: 4px;
       }
 
       .skills {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 8px;
+        gap: 8px 20px;
+        margin-top: 8px;
       }
 
       .skills div {
@@ -89,7 +101,7 @@
       }
 
       a {
-        color: #2980b9;
+        color: #1a73e8;
         text-decoration: none;
       }
 
@@ -97,14 +109,23 @@
         text-decoration: underline;
       }
 
+      /* subtle project spacing */
+      .project-title + ul {
+        margin-top: 4px;
+      }
+
+      /* print friendly */
       @media print {
         body {
-          margin: 0;
+          background: white;
         }
 
         .container {
+          box-shadow: none;
+          border-left: none;
           margin: 0;
           padding: 0;
+          max-width: 100%;
         }
 
         a {
@@ -122,7 +143,7 @@
   <body>
     <div class="container">
       <header>
-        <h1>Atul Gupta</h1>
+        <h1 class="name">Atul Gupta</h1>
 
         <div class="contact">
           Email: <a href="mailto:iatul1585@gmail.com">iatul1585@gmail.com</a> |
@@ -131,7 +152,8 @@
           <a href="https://www.linkedin.com/in/atul-gupta-9a09b5312/"
             >linkedin.com/in/atul-gupta</a
           >
-          | Location: Samba, Jammu & Kashmir, India
+          <br />
+          Location: Samba, Jammu & Kashmir, India
         </div>
       </header>
 
@@ -139,20 +161,46 @@
         <h2>Profile</h2>
 
         <p>
-          B.Tech Computer Science student with strong programming foundations in
-          C++, Python, and Kotlin. Experienced in building machine learning and
-          Android applications, with a strong interest in software development,
-          AI systems, and cloud technologies. Passionate about developing
-          practical solutions and continuously learning modern tools and
-          frameworks.
+          B.Tech Computer Science student with foundations in programming, web
+          development, and machine learning. Experienced in building AI-based
+          applications and Android projects. Interested in software engineering,
+          artificial intelligence, and cloud technologies, with a focus on
+          building practical and impactful solutions.
         </p>
       </section>
 
       <section>
+        <h2>Education</h2>
+
+        <p>
+          <strong
+            >Bachelor of Technology – Computer Science and Engineering</strong
+          ><br />
+          Central University of Jammu | 2024 – 2028<br />
+          GPA: 7.48 (Semester 2)
+        </p>
+
+        <p>
+          <strong>Intermediate Science (I.Sc.)</strong><br />
+          Kendriya Vidyalaya ECRly, Samastipur, Bihar<br />
+          2023 | Marks: 90.8%
+        </p>
+      </section>
+      <section>
+        <h2>Relevant Coursework</h2>
+
+        <ul>
+          <li>Data Structures and Algorithms</li>
+          <li>Object-Oriented Programming</li>
+          <li>Database Management Systems</li>
+          <li>AI / ML Fundamentals</li>
+        </ul>
+      </section>
+      <section>
         <h2>Technical Skills</h2>
 
         <div class="skills">
-          <div><strong>Programming:</strong> C, C++, Python, Java, Kotlin</div>
+          <div><strong>Programming:</strong> C/C++, Python, Java, Kotlin</div>
           <div><strong>Web:</strong> HTML, CSS, JavaScript (Learning)</div>
           <div><strong>App Development:</strong> Android Studio (Kotlin)</div>
           <div>
@@ -218,7 +266,9 @@
       <section>
         <h2>Experience</h2>
 
-        <p class="project-title">AI Azure Internship – Microsoft Initiative</p>
+        <p class="project-title">
+          AI Azure Internship (Online) – Microsoft Initiative
+        </p>
 
         <p class="meta">
           Edunet Foundation in collaboration with AICTE | May 2025 – June 2025
@@ -241,25 +291,65 @@
           </li>
         </ul>
       </section>
-
       <section>
-        <h2>Education</h2>
+        <h2>Leadership & Activities</h2>
 
-        <p>
-          <strong
-            >Bachelor of Technology – Computer Science and Engineering</strong
-          ><br />
-          Central University of Jammu | 2024 – 2028<br />
-          GPA: 7.48 (Semester 2)
+        <p class="project-title">Class Representative (CR)</p>
+
+        <p class="meta">Central University of Jammu | 2024 – Present</p>
+
+        <ul>
+          <li>
+            Represent the class in academic discussions with faculty and
+            department administration.
+          </li>
+          <li>
+            Coordinate communication between students and faculty for academic
+            activities and announcements.
+          </li>
+        </ul>
+
+        <p class="project-title">
+          Secretary — IEEE Computational Intelligence Society (CIS) Student
+          Branch
         </p>
 
-        <p>
-          <strong>Intermediate Science (I.Sc.)</strong><br />
-          Kendriya Vidyalaya ECRly, Samastipur, Bihar<br />
-          2023 | Marks: 90.8%
+        <p class="meta">Central University of Jammu</p>
+
+        <ul>
+          <li>
+            Co-organized technical events, workshops, and hackathons focused on
+            AI, automation, and emerging technologies.
+          </li>
+          <li>
+            Helped organize a
+            <strong>Chatbots & Automation Workshop</strong> sponsored by
+            <strong>n8n</strong>, introducing students to automation workflows
+            and chatbot development.
+          </li>
+          <li>
+            Contributed to organizing
+            <strong>IEEE Day 2025 (TechSanskriti)</strong> including a
+            hackathon, poster presentation competition, and expert speaker
+            sessions.
+          </li>
+        </ul>
+
+        <p class="project-title">
+          Student Member — ACM (Association for Computing Machinery)
         </p>
+
+        <ul>
+          <li>
+            Active member of the ACM student community, engaging in technical
+            discussions and computing initiatives.
+          </li>
+          <li>
+            Access global computing resources and participate in professional
+            development opportunities.
+          </li>
+        </ul>
       </section>
-
       <section>
         <h2>Certifications</h2>
 
@@ -289,7 +379,8 @@
           </li>
 
           <li>
-            Artificial Intelligence & Machine Learning (20hr) — Microsoft Learn
+            AI & ML Online Course (20hr) — Microsoft Learn in collaboration with
+            FICE
           </li>
         </ul>
       </section>
