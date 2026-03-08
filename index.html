@@ -7,37 +7,85 @@
 
     <style>
       body {
-        font-family: Arial, Helvetica, sans-serif;
-        background: white;
+        font-family: "Segoe UI", Arial, sans-serif;
         margin: 0;
-        padding: 0;
+        background: #ffffff;
+        color: #222;
         line-height: 1.6;
-        color: #333;
       }
 
       .container {
-        max-width: 750px;
+        max-width: 850px;
         margin: 40px auto;
-        padding: 20px;
+        padding: 30px;
       }
 
       header {
-        text-align: center;
-        margin-bottom: 20px;
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
       }
 
       h1 {
-        margin-bottom: 5px;
+        margin: 0;
+        font-size: 32px;
         color: #2c3e50;
       }
 
       .contact {
+        margin-top: 6px;
         font-size: 14px;
+        color: #555;
       }
 
-      .location {
+      .contact a {
+        color: #2980b9;
+        text-decoration: none;
+      }
+
+      .contact a:hover {
+        text-decoration: underline;
+      }
+
+      section {
+        margin-top: 25px;
+      }
+
+      h2 {
+        font-size: 18px;
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 4px;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin: 6px 0;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      .project-title {
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      .meta {
         font-size: 14px;
-        color: #666;
+        color: #555;
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .skills div {
+        font-size: 14px;
       }
 
       a {
@@ -49,33 +97,9 @@
         text-decoration: underline;
       }
 
-      section {
-        margin-top: 25px;
-      }
-
-      h2 {
-        border-bottom: 2px solid #3498db;
-        padding-bottom: 4px;
-        margin-bottom: 10px;
-        color: #2c3e50;
-        font-size: 20px;
-      }
-
-      ul {
-        padding-left: 20px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .project-title {
-        font-weight: bold;
-      }
-
       @media print {
         body {
-          background: white;
+          margin: 0;
         }
 
         .container {
@@ -87,6 +111,10 @@
           color: black;
           text-decoration: none;
         }
+
+        @page {
+          margin: 1in;
+        }
       }
     </style>
   </head>
@@ -96,114 +124,93 @@
       <header>
         <h1>Atul Gupta</h1>
 
-        <p class="contact">
+        <div class="contact">
           Email: <a href="mailto:iatul1585@gmail.com">iatul1585@gmail.com</a> |
           GitHub: <a href="https://github.com/iatul26">github.com/iatul26</a> |
           LinkedIn:
           <a href="https://www.linkedin.com/in/atul-gupta-9a09b5312/"
             >linkedin.com/in/atul-gupta</a
           >
-        </p>
-
-        <p class="location">Samba, Jammu & Kashmir, India</p>
+          | Location: Samba, Jammu & Kashmir, India
+        </div>
       </header>
 
       <section>
         <h2>Profile</h2>
 
         <p>
-          B.Tech Computer Science student with strong programming fundamentals
-          and growing experience in web development, Android applications, and
-          machine learning experimentation.
-          <br />Passionate about building practical software solutions,
-          exploring cloud-based technologies,and contributing to innovative
-          development projects while continuously learning and applying modern
-          tools.
+          B.Tech Computer Science student with strong programming foundations in
+          C++, Python, and Kotlin. Experienced in building machine learning and
+          Android applications, with a strong interest in software development,
+          AI systems, and cloud technologies. Passionate about developing
+          practical solutions and continuously learning modern tools and
+          frameworks.
         </p>
-      </section>
-
-      <section>
-        <h2>Education</h2>
-
-        <ul>
-          <li>
-            <strong
-              >Bachelor of Technology – Computer Science and Engineering</strong
-            ><br />
-            Central University of Jammu (2024 – 2028)<br />
-            GPA: 7.48 (Semester 2)
-          </li>
-
-          <li>
-            <strong>Intermediate Science (I.Sc.)</strong><br />
-            Kendriya Vidyalaya E C Rly, Samastipur, Bihar<br />
-            Intermediate: 2023 | Marks: 90.8%
-          </li>
-        </ul>
       </section>
 
       <section>
         <h2>Technical Skills</h2>
 
-        <ul>
-          <li><strong>Programming:</strong> C/C++, Python, Java, Kotlin</li>
-
-          <li>
-            <strong>Web Development:</strong> HTML, CSS, JavaScript (Learning)
-          </li>
-
-          <li><strong>App Development:</strong> Android Studio (Kotlin)</li>
-
-          <li>
-            <strong>AI / ML Exposure:</strong> Model training basics supervised
-            learning workflow
-          </li>
-
-          <li><strong>Tools:</strong> Git, GitHub, VS Code</li>
-
-          <li><strong>AI Tools:</strong> Prompt Engineering, LLM workflows</li>
-        </ul>
+        <div class="skills">
+          <div><strong>Programming:</strong> C, C++, Python, Java, Kotlin</div>
+          <div><strong>Web:</strong> HTML, CSS, JavaScript (Learning)</div>
+          <div><strong>App Development:</strong> Android Studio (Kotlin)</div>
+          <div>
+            <strong>AI / ML:</strong> Supervised learning, Model training basics
+          </div>
+          <div><strong>Tools:</strong> Git, GitHub, VS Code</div>
+          <div>
+            <strong>AI Tools:</strong> Prompt Engineering, LLM workflows
+          </div>
+        </div>
       </section>
 
       <section>
         <h2>Projects</h2>
 
+        <p class="project-title">
+          Credit Card Fraud Identifier |
+          <a href="https://github.com/iatul26/Credit-Card-Fraud-Identifier"
+            >GitHub</a
+          >
+        </p>
+
         <ul>
           <li>
-            <span class="project-title">Credit Card Fraud Identifier</span
-            ><br />
-            <a href="https://github.com/iatul26/Credit-Card-Fraud-Identifier"
-              >github.com/iatul26/Credit-Card-Fraud-Identifier</a
-            >
-
-            <ul>
-              <li>Built ML-based fraud detection system using Python</li>
-              <li>Performed dataset preprocessing and feature analysis</li>
-              <li>
-                Implemented classification model to detect fraudulent
-                transactions
-              </li>
-            </ul>
+            Developed a machine learning model in Python to detect fraudulent
+            credit card transactions.
           </li>
 
           <li>
-            <span class="project-title">Spam Shield – Android Application</span>
-            <br />
-            <a href="https://github.com/iatul26/Spam-Shield"
-              >github.com/iatul26/Spam-Shield</a
-            >
-            <ul>
-              <li>Android application for spam SMS detection</li>
-              <li>
-                Implemented heuristic filtering and
-                <a href="https://github.com/iatul26/Spam-Identifier"
-                  >TensorFlow Lite ML model</a
-                >
-              </li>
-              <li>
-                Designed message classification workflow for spam filtering
-              </li>
-            </ul>
+            Performed dataset preprocessing, feature analysis, and data
+            cleaning.
+          </li>
+
+          <li>
+            Implemented classification algorithms to identify fraud patterns in
+            transaction data.
+          </li>
+        </ul>
+
+        <p class="project-title">
+          Spam Shield – Android Application |
+          <a href="https://github.com/iatul26/Spam-Shield">GitHub</a>
+        </p>
+
+        <ul>
+          <li>
+            Developed an Android application using Kotlin for spam SMS
+            detection.
+          </li>
+
+          <li>
+            Integrated heuristic filtering and a TensorFlow Lite ML model for
+            message classification.
+          </li>
+
+          <li>
+            Designed a workflow to automatically identify and filter spam
+            messages.
           </li>
         </ul>
       </section>
@@ -211,30 +218,46 @@
       <section>
         <h2>Experience</h2>
 
+        <p class="project-title">AI Azure Internship – Microsoft Initiative</p>
+
+        <p class="meta">
+          Edunet Foundation in collaboration with AICTE | May 2025 – June 2025
+        </p>
+
         <ul>
           <li>
-            <strong>AI Azure Internship – Microsoft Initiative</strong><br />
-            Implemented by Edunet Foundation in collaboration with AICTE<br />
-            Duration: May 13, 2025 – June 13, 2025
+            Completed a 4-week internship focused on Azure AI services and
+            cloud-based machine learning.
+          </li>
 
-            <ul>
-              <li>
-                Completed 4-week internship focused on Azure AI and cloud
-                computing
-              </li>
+          <li>
+            Learned fundamentals of deploying AI models using Microsoft Azure
+            tools.
+          </li>
 
-              <li>
-                Learned Azure AI services and machine learning deployment
-                workflow
-              </li>
-
-              <li>
-                Developed ML-based Credit Card Fraud Detection system using
-                Python
-              </li>
-            </ul>
+          <li>
+            Developed a machine learning project for credit card fraud detection
+            using Python.
           </li>
         </ul>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+
+        <p>
+          <strong
+            >Bachelor of Technology – Computer Science and Engineering</strong
+          ><br />
+          Central University of Jammu | 2024 – 2028<br />
+          GPA: 7.48 (Semester 2)
+        </p>
+
+        <p>
+          <strong>Intermediate Science (I.Sc.)</strong><br />
+          Kendriya Vidyalaya ECRly, Samastipur, Bihar<br />
+          2023 | Marks: 90.8%
+        </p>
       </section>
 
       <section>
@@ -245,9 +268,8 @@
             <a
               href="https://www.coursera.org/account/accomplishments/verify/KU4FQOUPIQ1X"
             >
-              Introduction to Artificial Intelligence (AI)
+              Introduction to Artificial Intelligence
             </a>
-            — IBM, Coursera
           </li>
 
           <li>
@@ -256,7 +278,6 @@
             >
               Generative AI: Introduction and Applications
             </a>
-            — IBM, Coursera
           </li>
 
           <li>
@@ -265,12 +286,10 @@
             >
               Prompt Engineering for ChatGPT
             </a>
-            — Vanderbilt University, Coursera
           </li>
 
           <li>
-            Artificial Intelligence & Machine Learning (20hr course) — Microsoft
-            Learn (FICE Collaboration)
+            Artificial Intelligence & Machine Learning (20hr) — Microsoft Learn
           </li>
         </ul>
       </section>
@@ -279,9 +298,8 @@
         <h2>Languages</h2>
 
         <ul>
-          <li>Hindi — Native Proficiency</li>
-
-          <li>English — Professional Proficiency</li>
+          <li>Hindi — Native</li>
+          <li>English — Professional</li>
         </ul>
       </section>
     </div>
